@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		61071AA023390EF30097964A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61071A9F23390EF30097964A /* AppDelegate.m */; };
+		61071AA223390EF30097964A /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 61071AA123390EF30097964A /* GameScene.sks */; };
+		61071AA423390EF30097964A /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 61071AA323390EF30097964A /* Actions.sks */; };
+		61071AA723390EF30097964A /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 61071AA623390EF30097964A /* GameScene.m */; };
+		61071AAA23390EF30097964A /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61071AA923390EF30097964A /* GameViewController.m */; };
+		61071AAD23390EF30097964A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61071AAB23390EF30097964A /* Main.storyboard */; };
+		61071AAF23390EF50097964A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61071AAE23390EF50097964A /* Assets.xcassets */; };
+		61071AB223390EF50097964A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61071AB023390EF50097964A /* LaunchScreen.storyboard */; };
+		61071AB523390EF50097964A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61071AB423390EF50097964A /* main.m */; };
+		61071ABF23390EF50097964A /* PongIOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61071ABE23390EF50097964A /* PongIOSTests.m */; };
+		61071ACA23390EF50097964A /* PongIOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61071AC923390EF50097964A /* PongIOSUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		61071ABB23390EF50097964A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 61071A9323390EF30097964A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61071A9A23390EF30097964A;
+			remoteInfo = PongIOS;
+		};
+		61071AC623390EF50097964A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 61071A9323390EF30097964A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61071A9A23390EF30097964A;
+			remoteInfo = PongIOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		61071A9B23390EF30097964A /* PongIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PongIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		61071A9E23390EF30097964A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		61071A9F23390EF30097964A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		61071AA123390EF30097964A /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		61071AA323390EF30097964A /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		61071AA523390EF30097964A /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		61071AA623390EF30097964A /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		61071AA823390EF30097964A /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		61071AA923390EF30097964A /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		61071AAC23390EF30097964A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		61071AAE23390EF50097964A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		61071AB123390EF50097964A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		61071AB323390EF50097964A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61071AB423390EF50097964A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		61071ABA23390EF50097964A /* PongIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PongIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		61071ABE23390EF50097964A /* PongIOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PongIOSTests.m; sourceTree = "<group>"; };
+		61071AC023390EF50097964A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61071AC523390EF50097964A /* PongIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PongIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		61071AC923390EF50097964A /* PongIOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PongIOSUITests.m; sourceTree = "<group>"; };
+		61071ACB23390EF50097964A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		61071A9823390EF30097964A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61071AB723390EF50097964A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61071AC223390EF50097964A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		61071A9223390EF30097964A = {
+			isa = PBXGroup;
+			children = (
+				61071A9D23390EF30097964A /* PongIOS */,
+				61071ABD23390EF50097964A /* PongIOSTests */,
+				61071AC823390EF50097964A /* PongIOSUITests */,
+				61071A9C23390EF30097964A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		61071A9C23390EF30097964A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				61071A9B23390EF30097964A /* PongIOS.app */,
+				61071ABA23390EF50097964A /* PongIOSTests.xctest */,
+				61071AC523390EF50097964A /* PongIOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		61071A9D23390EF30097964A /* PongIOS */ = {
+			isa = PBXGroup;
+			children = (
+				61071A9E23390EF30097964A /* AppDelegate.h */,
+				61071A9F23390EF30097964A /* AppDelegate.m */,
+				61071AA123390EF30097964A /* GameScene.sks */,
+				61071AA323390EF30097964A /* Actions.sks */,
+				61071AA523390EF30097964A /* GameScene.h */,
+				61071AA623390EF30097964A /* GameScene.m */,
+				61071AA823390EF30097964A /* GameViewController.h */,
+				61071AA923390EF30097964A /* GameViewController.m */,
+				61071AAB23390EF30097964A /* Main.storyboard */,
+				61071AAE23390EF50097964A /* Assets.xcassets */,
+				61071AB023390EF50097964A /* LaunchScreen.storyboard */,
+				61071AB323390EF50097964A /* Info.plist */,
+				61071AB423390EF50097964A /* main.m */,
+			);
+			path = PongIOS;
+			sourceTree = "<group>";
+		};
+		61071ABD23390EF50097964A /* PongIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				61071ABE23390EF50097964A /* PongIOSTests.m */,
+				61071AC023390EF50097964A /* Info.plist */,
+			);
+			path = PongIOSTests;
+			sourceTree = "<group>";
+		};
+		61071AC823390EF50097964A /* PongIOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				61071AC923390EF50097964A /* PongIOSUITests.m */,
+				61071ACB23390EF50097964A /* Info.plist */,
+			);
+			path = PongIOSUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		61071A9A23390EF30097964A /* PongIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61071ACE23390EF50097964A /* Build configuration list for PBXNativeTarget "PongIOS" */;
+			buildPhases = (
+				61071A9723390EF30097964A /* Sources */,
+				61071A9823390EF30097964A /* Frameworks */,
+				61071A9923390EF30097964A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PongIOS;
+			productName = PongIOS;
+			productReference = 61071A9B23390EF30097964A /* PongIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		61071AB923390EF50097964A /* PongIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61071AD123390EF50097964A /* Build configuration list for PBXNativeTarget "PongIOSTests" */;
+			buildPhases = (
+				61071AB623390EF50097964A /* Sources */,
+				61071AB723390EF50097964A /* Frameworks */,
+				61071AB823390EF50097964A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				61071ABC23390EF50097964A /* PBXTargetDependency */,
+			);
+			name = PongIOSTests;
+			productName = PongIOSTests;
+			productReference = 61071ABA23390EF50097964A /* PongIOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		61071AC423390EF50097964A /* PongIOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61071AD423390EF50097964A /* Build configuration list for PBXNativeTarget "PongIOSUITests" */;
+			buildPhases = (
+				61071AC123390EF50097964A /* Sources */,
+				61071AC223390EF50097964A /* Frameworks */,
+				61071AC323390EF50097964A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				61071AC723390EF50097964A /* PBXTargetDependency */,
+			);
+			name = PongIOSUITests;
+			productName = PongIOSUITests;
+			productReference = 61071AC523390EF50097964A /* PongIOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		61071A9323390EF30097964A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Jordan Jacobson";
+				TargetAttributes = {
+					61071A9A23390EF30097964A = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					61071AB923390EF50097964A = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 61071A9A23390EF30097964A;
+					};
+					61071AC423390EF50097964A = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 61071A9A23390EF30097964A;
+					};
+				};
+			};
+			buildConfigurationList = 61071A9623390EF30097964A /* Build configuration list for PBXProject "PongIOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 61071A9223390EF30097964A;
+			productRefGroup = 61071A9C23390EF30097964A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				61071A9A23390EF30097964A /* PongIOS */,
+				61071AB923390EF50097964A /* PongIOSTests */,
+				61071AC423390EF50097964A /* PongIOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		61071A9923390EF30097964A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61071AAD23390EF30097964A /* Main.storyboard in Resources */,
+				61071AA223390EF30097964A /* GameScene.sks in Resources */,
+				61071AAF23390EF50097964A /* Assets.xcassets in Resources */,
+				61071AB223390EF50097964A /* LaunchScreen.storyboard in Resources */,
+				61071AA423390EF30097964A /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61071AB823390EF50097964A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61071AC323390EF50097964A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		61071A9723390EF30097964A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61071AA723390EF30097964A /* GameScene.m in Sources */,
+				61071AAA23390EF30097964A /* GameViewController.m in Sources */,
+				61071AB523390EF50097964A /* main.m in Sources */,
+				61071AA023390EF30097964A /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61071AB623390EF50097964A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61071ABF23390EF50097964A /* PongIOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61071AC123390EF50097964A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61071ACA23390EF50097964A /* PongIOSUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		61071ABC23390EF50097964A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61071A9A23390EF30097964A /* PongIOS */;
+			targetProxy = 61071ABB23390EF50097964A /* PBXContainerItemProxy */;
+		};
+		61071AC723390EF50097964A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61071A9A23390EF30097964A /* PongIOS */;
+			targetProxy = 61071AC623390EF50097964A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		61071AAB23390EF30097964A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61071AAC23390EF30097964A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		61071AB023390EF50097964A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61071AB123390EF50097964A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		61071ACC23390EF50097964A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		61071ACD23390EF50097964A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		61071ACF23390EF50097964A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PongIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Jordan-Jacobson.PongIOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		61071AD023390EF50097964A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PongIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Jordan-Jacobson.PongIOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		61071AD223390EF50097964A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PongIOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Jordan-Jacobson.PongIOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PongIOS.app/PongIOS";
+			};
+			name = Debug;
+		};
+		61071AD323390EF50097964A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PongIOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Jordan-Jacobson.PongIOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PongIOS.app/PongIOS";
+			};
+			name = Release;
+		};
+		61071AD523390EF50097964A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PongIOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Jordan-Jacobson.PongIOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PongIOS;
+			};
+			name = Debug;
+		};
+		61071AD623390EF50097964A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PongIOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Jordan-Jacobson.PongIOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PongIOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		61071A9623390EF30097964A /* Build configuration list for PBXProject "PongIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61071ACC23390EF50097964A /* Debug */,
+				61071ACD23390EF50097964A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61071ACE23390EF50097964A /* Build configuration list for PBXNativeTarget "PongIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61071ACF23390EF50097964A /* Debug */,
+				61071AD023390EF50097964A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61071AD123390EF50097964A /* Build configuration list for PBXNativeTarget "PongIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61071AD223390EF50097964A /* Debug */,
+				61071AD323390EF50097964A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61071AD423390EF50097964A /* Build configuration list for PBXNativeTarget "PongIOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61071AD523390EF50097964A /* Debug */,
+				61071AD623390EF50097964A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 61071A9323390EF30097964A /* Project object */;
+}
