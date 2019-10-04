@@ -11,6 +11,7 @@
 @implementation GameScene {
     SKShapeNode *_spinnyNode;
     SKLabelNode *_label;
+    SKSpriteNode *_bar;
 }
 
 - (void)didMoveToView:(SKView *)view {
@@ -18,6 +19,7 @@
     
     // Get label node from scene and store it for use later
     _label = (SKLabelNode *)[self childNodeWithName:@"//helloLabel"];
+    _bar = (SKSpriteNode *)[self childNodeWithName:@"//bar"];
     
     _label.alpha = 0.0;
     [_label runAction:[SKAction fadeInWithDuration:2.0]];
@@ -61,7 +63,7 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     // Run 'Pulse' action from 'Actions.sks'
     [_label runAction:[SKAction actionNamed:@"Pulse"] withKey:@"fadeInOut"];
-    
+    [_ball runAction:[SKAction actionNamed:@"Pulse"] withKey:@"fadeInOut"];
     for (UITouch *t in touches) {[self touchDownAtPoint:[t locationInNode:self]];}
 }
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
