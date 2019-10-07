@@ -10,7 +10,7 @@
 
 @implementation GameScene {
     //SKShapeNode *_spinnyNode;
-    //SKLabelNode *_label;
+    SKLabelNode *_intro;
     SKSpriteNode *_bar;
     SKSpriteNode * _ball;
 }
@@ -22,6 +22,7 @@
    // _label = (SKLabelNode *)[self childNodeWithName:@"//helloLabel"];
     _bar = (SKSpriteNode *)[self childNodeWithName:@"//bar"];
     _ball = (SKSpriteNode *)[self childNodeWithName:@"//ball"];
+    _intro = (SKLabelNode * ) [self childNodeWithName:@"//intro"];
     
     //_label.alpha = 0.0;
     //[_label runAction:[SKAction fadeInWithDuration:2.0]];
@@ -73,6 +74,7 @@
     //[_label runAction:[SKAction actionNamed:@"Pulse"] withKey:@"fadeInOut"];
     //[_bar runAction:[SKAction actionNamed:@"Pulse"] withKey:@"fadeInOut"];
     for (UITouch *t in touches) {[self touchDownAtPoint:[t locationInNode:self]];}
+    [_intro removeFromParent];
 }
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
     for (UITouch *t in touches) {[self touchMovedToPoint:[t locationInNode:self]];}
