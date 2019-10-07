@@ -12,6 +12,7 @@
     //SKShapeNode *_spinnyNode;
     //SKLabelNode *_label;
     SKSpriteNode *_bar;
+    SKSpriteNode * _ball;
 }
 
 - (void)didMoveToView:(SKView *)view {
@@ -20,6 +21,7 @@
     // Get label node from scene and store it for use later
    // _label = (SKLabelNode *)[self childNodeWithName:@"//helloLabel"];
     _bar = (SKSpriteNode *)[self childNodeWithName:@"//bar"];
+    _ball = (SKSpriteNode *)[self childNodeWithName:@"//ball"];
     
     //_label.alpha = 0.0;
     //[_label runAction:[SKAction fadeInWithDuration:2.0]];
@@ -45,7 +47,7 @@
     //n.strokeColor = [SKColor greenColor];
     //[self addChild:n];
     
-    pos.y = 50;
+    pos.y = 10;
     [_bar setPosition:pos];
 }
 
@@ -62,7 +64,7 @@
     //n.strokeColor = [SKColor redColor];
     //[self addChild:n];
     
-    pos.y = 50;
+    pos.y = 10;
     [_bar setPosition:pos];
 }
 
