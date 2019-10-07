@@ -48,7 +48,7 @@
     //n.strokeColor = [SKColor greenColor];
     //[self addChild:n];
     
-    pos.y = 10;
+    pos.y = 1;
     [_bar setPosition:pos];
 }
 
@@ -57,6 +57,9 @@
     //n.position = pos;
    // n.strokeColor = [SKColor blueColor];
     //[self addChild:n];
+    _bar.position = pos;
+    pos.y = 1;
+    [_bar setPosition:pos];
 }
 
 - (void)touchUpAtPoint:(CGPoint)pos {
@@ -64,7 +67,7 @@
     //n.position = pos;
     //n.strokeColor = [SKColor redColor];
     //[self addChild:n];
-    
+    _bar.position = pos;
     pos.y = 10;
     [_bar setPosition:pos];
 }
@@ -78,6 +81,7 @@
 }
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
     for (UITouch *t in touches) {[self touchMovedToPoint:[t locationInNode:self]];}
+    
 }
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     for (UITouch *t in touches) {[self touchUpAtPoint:[t locationInNode:self]];}
