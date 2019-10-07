@@ -44,6 +44,9 @@
     n.position = pos;
     n.strokeColor = [SKColor greenColor];
     [self addChild:n];
+    
+    pos.y = 50;
+    [_bar setPosition:pos];
 }
 
 - (void)touchMovedToPoint:(CGPoint)pos {
@@ -58,12 +61,15 @@
     n.position = pos;
     n.strokeColor = [SKColor redColor];
     [self addChild:n];
+    
+    pos.y = 50;
+    [_bar setPosition:pos];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     // Run 'Pulse' action from 'Actions.sks'
     [_label runAction:[SKAction actionNamed:@"Pulse"] withKey:@"fadeInOut"];
-    [_ball runAction:[SKAction actionNamed:@"Pulse"] withKey:@"fadeInOut"];
+    //[_bar runAction:[SKAction actionNamed:@"Pulse"] withKey:@"fadeInOut"];
     for (UITouch *t in touches) {[self touchDownAtPoint:[t locationInNode:self]];}
 }
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
