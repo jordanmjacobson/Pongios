@@ -13,16 +13,38 @@
     SKLabelNode *_intro;
     SKSpriteNode *_bar;
     SKSpriteNode * _ball;
+    int paddle_y;
 }
+
+#define BAR_CATEGORY 1
+#define BLOCK_CATEGORY 2
 
 - (void)didMoveToView:(SKView *)view {
     // Setup your scene here
+    
+    paddle_y = -500;
     
     // Get label node from scene and store it for use later
    // _label = (SKLabelNode *)[self childNodeWithName:@"//helloLabel"];
     _bar = (SKSpriteNode *)[self childNodeWithName:@"//bar"];
     _ball = (SKSpriteNode *)[self childNodeWithName:@"//ball"];
     _intro = (SKLabelNode * ) [self childNodeWithName:@"//intro"];
+    
+    [_ball setPhysicsBody:[[SKPhysicsBody alloc] init]];
+    [[_ball physicsBody] setCategoryBitMask:BLOCK_CATEGORY];
+    [[_ball physicsBody] setContactTestBitMask:BAR_CATEGORY];
+    [[_ball physicsBody] setDynamic:YES];
+    
+    [_bar setPhysicsBody:[[SKPhysicsBody alloc] init]];
+    [[_bar physicsBody] setCategoryBitMask:BAR_CATEGORY];
+    [[_bar physicsBody] setContactTestBitMask:BLOCK_CATEGORY];
+    [[_bar physicsBody] setDynamic:YES];
+    
+    CGVector v;
+    v.dx = 0;
+    v.dy = 0;
+    [[self physicsWorld] setGravity:v];
+    [[self physicsWorld] setContactDelegate:self];
     
     //_label.alpha = 0.0;
     //[_label runAction:[SKAction fadeInWithDuration:2.0]];
@@ -48,7 +70,7 @@
     //n.strokeColor = [SKColor greenColor];
     //[self addChild:n];
     
-    pos.y = 1;
+    pos.y = paddle_y;
     [_bar setPosition:pos];
 }
 
@@ -57,8 +79,8 @@
     //n.position = pos;
    // n.strokeColor = [SKColor blueColor];
     //[self addChild:n];
-    _bar.position = pos;
-    pos.y = 1;
+    //_bar.position = pos;
+    pos.y = paddle_y;
     [_bar setPosition:pos];
 }
 
@@ -67,8 +89,8 @@
     //n.position = pos;
     //n.strokeColor = [SKColor redColor];
     //[self addChild:n];
-    _bar.position = pos;
-    pos.y = 10;
+    //bar.position = pos;
+    pos.y = paddle_y;
     [_bar setPosition:pos];
 }
 
@@ -78,6 +100,13 @@
     //[_bar runAction:[SKAction actionNamed:@"Pulse"] withKey:@"fadeInOut"];
     for (UITouch *t in touches) {[self touchDownAtPoint:[t locationInNode:self]];}
     [_intro removeFromParent];
+    
+    CGVector v;
+    v.dx = 11;
+    v.dy = -200;
+    [[_ball physicsBody] setVelocity:v];
+
+    [_ball runAction:[SKAction rotateByAngle:3 duration:2]];
 }
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
     for (UITouch *t in touches) {[self touchMovedToPoint:[t locationInNode:self]];}
@@ -85,6 +114,12 @@
 }
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     for (UITouch *t in touches) {[self touchUpAtPoint:[t locationInNode:self]];}
+    
+    CGVector v;
+    v.dx = -11;
+    v.dy = 200;
+    [[_ball physicsBody] setVelocity:v];
+
 }
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
     for (UITouch *t in touches) {[self touchUpAtPoint:[t locationInNode:self]];}
@@ -95,4 +130,12 @@
     // Called before each frame is rendered
 }
 
+-(void)didBeginContact:(SKPhysicsContact *)contact
+{
+    NSLog(@"Things touched!");
+    CGVector v = [[_ball physicsBody] velocity];
+    v.dy = -v.dy;
+    
+    [[_ball physicsBody] setVelocity:v];
+}
 @end
