@@ -11,13 +11,14 @@
 @implementation GameScene {
     //SKShapeNode *_spinnyNode;
     SKLabelNode *_intro;
+    SKLabelNode *_scoreboard; 
     SKSpriteNode *_bar;
     SKSpriteNode * _ball;
     int paddle_y;
 }
 
 #define BAR_CATEGORY 1
-#define BLOCK_CATEGORY 2
+#define BLOCK_CATEGORY 1
 
 - (void)didMoveToView:(SKView *)view {
     // Setup your scene here
@@ -30,15 +31,19 @@
     _ball = (SKSpriteNode *)[self childNodeWithName:@"//ball"];
     _intro = (SKLabelNode * ) [self childNodeWithName:@"//intro"];
     
-    [_ball setPhysicsBody:[[SKPhysicsBody alloc] init]];
+    //[_ball setPhysicsBody:[[SKPhysicsBody alloc] init]];
+    [_ball setPhysicsBody:[SKPhysicsBody
+                           bodyWithRectangleOfSize:CGSizeMake(100, 100)]];
+
     [[_ball physicsBody] setCategoryBitMask:BLOCK_CATEGORY];
     [[_ball physicsBody] setContactTestBitMask:BAR_CATEGORY];
-    [[_ball physicsBody] setDynamic:YES];
+    //[[_ball physicsBody] setDynamic:YES];
     
-    [_bar setPhysicsBody:[[SKPhysicsBody alloc] init]];
+    [_bar setPhysicsBody:[SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(100, 100)]];
+    
     [[_bar physicsBody] setCategoryBitMask:BAR_CATEGORY];
     [[_bar physicsBody] setContactTestBitMask:BLOCK_CATEGORY];
-    [[_bar physicsBody] setDynamic:YES];
+    [[_bar physicsBody] setDynamic:NO];
     
     CGVector v;
     v.dx = 0;
@@ -69,7 +74,7 @@
     //n.position = pos;
     //n.strokeColor = [SKColor greenColor];
     //[self addChild:n];
-    
+    //[_ball runAction:[SKAction moveTo:pos duration:2]];
     pos.y = paddle_y;
     [_bar setPosition:pos];
 }
@@ -101,12 +106,19 @@
     for (UITouch *t in touches) {[self touchDownAtPoint:[t locationInNode:self]];}
     [_intro removeFromParent];
     
-    CGVector v;
-    v.dx = 11;
-    v.dy = -200;
-    [[_ball physicsBody] setVelocity:v];
+    static int firstTime = 1;
+    
+    if (firstTime)
+    {
+        CGVector v;
+        v.dx = 11;
+        v.dy = -200;
+        [[_ball physicsBody] setVelocity:v];
+        firstTime = 0;
+    }
 
-    [_ball runAction:[SKAction rotateByAngle:3 duration:2]];
+    // [_ball runAction:[SKAction rotateByAngle:3 duration:2]];
+    
 }
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
     for (UITouch *t in touches) {[self touchMovedToPoint:[t locationInNode:self]];}
@@ -118,7 +130,7 @@
     CGVector v;
     v.dx = -11;
     v.dy = 200;
-    [[_ball physicsBody] setVelocity:v];
+    //[[_ball physicsBody] setVelocity:v];
 
 }
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -136,6 +148,7 @@
     CGVector v = [[_ball physicsBody] velocity];
     v.dy = -v.dy;
     
-    [[_ball physicsBody] setVelocity:v];
+    
+    // [[_ball physicsBody] setVelocity:v];
 }
 @end
