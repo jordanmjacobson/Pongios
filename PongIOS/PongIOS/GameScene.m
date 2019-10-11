@@ -11,10 +11,11 @@
 @implementation GameScene {
     //SKShapeNode *_spinnyNode;
     SKLabelNode *_intro;
-    SKLabelNode *_scoreboard; 
+    SKLabelNode *_scoreboard;
     SKSpriteNode *_bar;
     SKSpriteNode * _ball;
     int paddle_y;
+    int score;
 }
 
 #define BAR_CATEGORY 1
@@ -30,6 +31,7 @@
     _bar = (SKSpriteNode *)[self childNodeWithName:@"//bar"];
     _ball = (SKSpriteNode *)[self childNodeWithName:@"//ball"];
     _intro = (SKLabelNode * ) [self childNodeWithName:@"//intro"];
+    _scoreboard = (SKLabelNode *)[self childNodeWithName:@"//scoreboard"];
     
     //[_ball setPhysicsBody:[[SKPhysicsBody alloc] init]];
     [_ball setPhysicsBody:[SKPhysicsBody
@@ -105,7 +107,8 @@
     //[_bar runAction:[SKAction actionNamed:@"Pulse"] withKey:@"fadeInOut"];
     for (UITouch *t in touches) {[self touchDownAtPoint:[t locationInNode:self]];}
     [_intro removeFromParent];
-    
+    score = 0;
+    [_scoreboard setText: (NSString)score];
     static int firstTime = 1;
     
     if (firstTime)
@@ -147,7 +150,8 @@
     NSLog(@"Things touched!");
     CGVector v = [[_ball physicsBody] velocity];
     v.dy = -v.dy;
-    
+    score++;
+    //scoreboard
     
     // [[_ball physicsBody] setVelocity:v];
 }
