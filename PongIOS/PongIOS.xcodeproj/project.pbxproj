@@ -18,6 +18,9 @@
 		61071AB523390EF50097964A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61071AB423390EF50097964A /* main.m */; };
 		61071ABF23390EF50097964A /* PongIOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61071ABE23390EF50097964A /* PongIOSTests.m */; };
 		61071ACA23390EF50097964A /* PongIOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61071AC923390EF50097964A /* PongIOSUITests.m */; };
+		6188B86A235759E900B1CA10 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6188B869235759E900B1CA10 /* MainMenuViewController.m */; };
+		6188B86D23575A5F00B1CA10 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6188B86C23575A5F00B1CA10 /* HelpViewController.m */; };
+		6188B87023575EFB00B1CA10 /* LeaderBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6188B86F23575EFB00B1CA10 /* LeaderBoardViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,12 @@
 		61071AC523390EF50097964A /* PongIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PongIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61071AC923390EF50097964A /* PongIOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PongIOSUITests.m; sourceTree = "<group>"; };
 		61071ACB23390EF50097964A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6188B868235759E900B1CA10 /* MainMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		6188B869235759E900B1CA10 /* MainMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+		6188B86B23575A5F00B1CA10 /* HelpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		6188B86C23575A5F00B1CA10 /* HelpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
+		6188B86E23575EFB00B1CA10 /* LeaderBoardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeaderBoardViewController.h; sourceTree = "<group>"; };
+		6188B86F23575EFB00B1CA10 /* LeaderBoardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeaderBoardViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,12 +120,18 @@
 				61071A9E23390EF30097964A /* AppDelegate.h */,
 				61071A9F23390EF30097964A /* AppDelegate.m */,
 				61071AA123390EF30097964A /* GameScene.sks */,
+				6188B868235759E900B1CA10 /* MainMenuViewController.h */,
+				6188B869235759E900B1CA10 /* MainMenuViewController.m */,
 				61071AA323390EF30097964A /* Actions.sks */,
 				61071AA523390EF30097964A /* GameScene.h */,
 				61071AA623390EF30097964A /* GameScene.m */,
 				61071AA823390EF30097964A /* GameViewController.h */,
 				61071AA923390EF30097964A /* GameViewController.m */,
 				61071AAB23390EF30097964A /* Main.storyboard */,
+				6188B86E23575EFB00B1CA10 /* LeaderBoardViewController.h */,
+				6188B86F23575EFB00B1CA10 /* LeaderBoardViewController.m */,
+				6188B86B23575A5F00B1CA10 /* HelpViewController.h */,
+				6188B86C23575A5F00B1CA10 /* HelpViewController.m */,
 				61071AAE23390EF50097964A /* Assets.xcassets */,
 				61071AB023390EF50097964A /* LaunchScreen.storyboard */,
 				61071AB323390EF50097964A /* Info.plist */,
@@ -276,9 +291,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				61071AA723390EF30097964A /* GameScene.m in Sources */,
+				6188B86D23575A5F00B1CA10 /* HelpViewController.m in Sources */,
 				61071AAA23390EF30097964A /* GameViewController.m in Sources */,
 				61071AB523390EF50097964A /* main.m in Sources */,
 				61071AA023390EF30097964A /* AppDelegate.m in Sources */,
+				6188B86A235759E900B1CA10 /* MainMenuViewController.m in Sources */,
+				6188B87023575EFB00B1CA10 /* LeaderBoardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

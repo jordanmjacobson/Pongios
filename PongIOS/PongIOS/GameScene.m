@@ -108,7 +108,6 @@
     for (UITouch *t in touches) {[self touchDownAtPoint:[t locationInNode:self]];}
     [_intro removeFromParent];
     score = 0;
-    [_scoreboard setText: (NSString)score];
     static int firstTime = 1;
     
     if (firstTime)
@@ -152,6 +151,8 @@
     v.dy = -v.dy;
     score++;
     //scoreboard
+    [_scoreboard setText: [NSString stringWithFormat:@"%d", score]];
+
     
     // [[_ball physicsBody] setVelocity:v];
 }
