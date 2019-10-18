@@ -14,6 +14,7 @@
     SKLabelNode *_scoreboard;
     SKSpriteNode *_bar;
     SKSpriteNode * _ball;
+    SKSpriteNode * _upper_barrier;
     int paddle_y;
     int score;
 }
@@ -32,6 +33,7 @@
     _ball = (SKSpriteNode *)[self childNodeWithName:@"//ball"];
     _intro = (SKLabelNode * ) [self childNodeWithName:@"//intro"];
     _scoreboard = (SKLabelNode *)[self childNodeWithName:@"//scoreboard"];
+    _upper_barrier = (SKSpriteNode * )[self childNodeWithName:@"//upper_barrier"];
     
     //[_ball setPhysicsBody:[[SKPhysicsBody alloc] init]];
     [_ball setPhysicsBody:[SKPhysicsBody
@@ -147,6 +149,33 @@
 -(void)didBeginContact:(SKPhysicsContact *)contact
 {
     NSLog(@"Things touched!");
+    
+    SKPhysicsBody *ball, *barrier;
+    if ([[contact bodyA] node] == _ball)
+    {
+        ball = [contact bodyA];
+        barrier = [contact bodyB];
+    }
+    else
+    {
+        ball = [contact bodyB];
+        barrier = [contact bodyA];
+    }
+    
+    // Now down here, check ball and barrier
+    // if ([barrier node] == _upper_barrier) ...
+    // if ([barrier node] == _paddle) ....
+    // if ([barrier node] == _left_or_right_side) ....
+    
+    //
+    if ([barrier node] == _upper_barrier)
+        {
+            // Bounce off the top
+        }
+    if ([barrier node] == _bar){
+        
+    }
+    
     CGVector v = [[_ball physicsBody] velocity];
     v.dy = -v.dy;
     score++;
