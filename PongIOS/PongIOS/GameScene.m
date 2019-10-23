@@ -177,12 +177,12 @@
     }
     
     CGVector v = [[_ball physicsBody] velocity];
-    v.dy = -v.dy;
+    //v.dy = -v.dy;
     score++;
     //scoreboard
     [_scoreboard setText: [NSString stringWithFormat:@"%d", score]];
 
-    
-    // [[_ball physicsBody] setVelocity:v];
+    v.dy = -200;
+    [[_ball physicsBody] setVelocity:v];
 }
 @end
